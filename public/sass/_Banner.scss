@@ -1,0 +1,28 @@
+.container__banner{
+    height: 40rem;
+    color:black;
+    background-image: url('../img/bannerImage.jfif');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+
+    &--text{
+        height: 90%;
+        width: 90%;
+        background-color: rgba(255, 255, 255, 0.288);
+        color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 100px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-shadow: 10px 5px 50px rgb(0, 0, 0);
+        border-radius: 4rem;
+    }
+}
+

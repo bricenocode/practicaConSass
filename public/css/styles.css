@@ -1,0 +1,225 @@
+@charset "UTF-8";
+body a {
+  color: black;
+  text-decoration: none; /* Sin subrayado */
+}
+body a:visited {
+  color: inherit; /* O puedes especificar otro color */
+  text-decoration: none; /* Sin subrayado después de ser visitado */
+}
+body a:active {
+  color: inherit; /* Mantiene el color del elemento padre */
+  text-decoration: none; /* Elimina el subrayado */
+  outline: none; /* Quita el borde que aparece en algunos navegadores */
+}
+body ul {
+  list-style-type: none;
+}
+
+.nav {
+  height: 70%;
+  background-color: #091722;
+  padding: 2rem;
+  display: flex;
+  flex: auto;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: center;
+  border-radius: 4px;
+  margin: 10px;
+}
+.nav__logo {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 100%;
+}
+.nav__items {
+  display: flex;
+  flex: 0 auto;
+  flex-direction: column;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+.nav__items--items {
+  background-color: #044f64;
+  text-decoration: none;
+  color: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 1px solid;
+  border-radius: 2rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1rem;
+  color: black;
+}
+.container__item {
+  background: linear-gradient(45deg, #acacac, #000000);
+  margin: 5px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px 1px rgba(0, 0, 0, 0.096);
+}
+.container__item.blue {
+  background: linear-gradient(45deg, #acacac, #000a22);
+}
+.container__item.red {
+  background: linear-gradient(45deg, #acacac, #330101);
+}
+.container__item.grey {
+  background: linear-gradient(45deg, #a1a1a1, #252525);
+}
+.container__item.white {
+  background: linear-gradient(45deg, #b8b8b8, #e9dfdf);
+}
+.container__item.yellow {
+  background: linear-gradient(45deg, #acacac, #7a6903);
+}
+.container__item.orange {
+  background: linear-gradient(45deg, #acacac, #773408);
+}
+.container__item.green {
+  background: linear-gradient(45deg, #acacac, #5e6825);
+}
+.container__item--image {
+  height: 200px;
+  position: relative;
+  top: 100px;
+}
+@media (max-width: 768px) {
+  .container__item--image {
+    height: 120px;
+    position: relative;
+    top: 50px;
+  }
+}
+@media (max-width: 1024px) {
+  .container__item--image {
+    height: 150px;
+    position: relative;
+    top: 70px;
+  }
+}
+.container__item--brand {
+  width: 200px;
+  position: relative;
+  left: 1rem;
+  top: -300px;
+  display: flex;
+  justify-content: start;
+  text-shadow: 2px 2px 5px rgb(214, 214, 214);
+}
+@media (max-width: 1200px) {
+  .container__item--brand {
+    top: -250px;
+  }
+}
+.container__item--container {
+  background-color: white;
+  border-radius: 0 0 5px 5px;
+  padding: 5px;
+  padding-top: 100px;
+}
+@media (max-width: 1200px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+.container__card {
+  position: relative;
+  top: -50px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+  align-items: center;
+  gap: 4px;
+}
+@media (max-width: 768px) {
+  .container__card {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.container__card--model {
+  font-weight: bold;
+  color: rgb(33, 33, 34);
+  font-size: 130%;
+  margin: 2px;
+}
+.container__card--price, .container__card--year {
+  font-size: 130%;
+  margin: 2px;
+}
+.container__card--price {
+  color: rgb(143, 1, 1);
+  font-weight: bold;
+}
+.container__card--year {
+  color: rgb(61, 59, 60);
+  font-weight: 400;
+}
+.container__card--button {
+  background-color: white;
+  color: #021135;
+  padding: 10px;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.insurance {
+  color: black;
+}
+
+.container__banner {
+  height: 40rem;
+  color: black;
+  background-image: url("../img/bannerImage.jfif");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.container__banner--text {
+  height: 90%;
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.288);
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 10px 5px 50px rgb(0, 0, 0);
+  border-radius: 4rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Oswald", serif;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+}
+
+/*# sourceMappingURL=styles.css.map */

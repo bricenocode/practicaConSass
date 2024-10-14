@@ -1,0 +1,21 @@
+
+$telefono:480px;
+$tablet:768px;
+$pc:1200px;
+$pcGrande:1400px;
+
+@use './Header';
+@use './CarDisplay';
+@use './CarDetail';
+@use './CarsInsurance';
+@use './Banner';
+html{
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Oswald', serif;
+    font-size: 2rem;
+    text-align: center;
+    color: white
+}
