@@ -9,13 +9,35 @@ $pcGrande:1400px;
 @use './CarDetail';
 @use './CarsInsurance';
 @use './Banner';
+@use './Form';
+@use './Galery';
+@use './Legals';
+@use './BotonUp';
+@use './Footer';
+
 html{
     font-size: 62.5%;
+    
 }
 
 body {
+    width: 100%;
     font-family: 'Oswald', serif;
     font-size: 2rem;
     text-align: center;
-    color: white
+    color: white;
+
+    h1,h2, h3,h4{
+        color:black;
+        text-transform: uppercase;
+    }
+
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 150px;
 }

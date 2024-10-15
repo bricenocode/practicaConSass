@@ -5,51 +5,74 @@ import { coches, seguros } from './db/db'
 import Form from './components/Form'
 import CarsInsurance from './components/CarsInsurance'
 import Banner from './components/Banner'
+import Galery from './components/Galery'
+import LegalAdvise from './components/LegalAdvise'
+import BontonUp from './components/BotonUp'
 function App() {
 
   console.log(seguros)
 
   return (
     <>
-      <Header/>
+    
+    <BontonUp/>
+    
+    <Header />
 
-      <section className='container__banner'>
-        <Banner/>
+    
+    <section className='container__banner'>
+        <Banner />
       </section>
 
+    <div className='main'>
+      
+
       <div>
-      <section className='container__carList'>
-          <h1>Listado de Coches</h1>
+        <section className='container__carList'>
+          <h1 id='coches'>Listado de Coches</h1>
           <div className='container'>
             {coches.map(coche => (
               <CarsDisplay
-                key = {coche.id}
-                coche = {coche}
+                key={coche.id}
+                coche={coche}
               />
 
             ))}
           </div>
-      </section>  
+        </section>
       </div>
-
+      
       <section className='container__insurance'>
-        <div>
-          {seguros.map( seguro => (
+        <h2 id='seguros' className="insuranceSection__container--title">SEGUROS DE COCHES</h2>
+        <div className="insuranceSection__container">
+          {seguros.map(seguro => (
             <CarsInsurance
-              key= {seguro.id}
-              seguro = {seguro}
-            />  
+              key={seguro.id}
+              seguro={seguro}
+            />
           ))}
+        </div>
+      </section>
+
+      <section id='galery' className='galery'>
+        <div>
+          <Galery />
         </div>
       </section>
 
       <section>
         <div>
-          <Form/>
+          <Form />
         </div>
       </section>
 
-      <Footer/>
+      <section>
+        <LegalAdvise />
+      </section>
+
+      
+    </div>
+    <Footer />
     </>
   )
 }

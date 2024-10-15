@@ -24,7 +24,7 @@ export default function CarsDisplay({coche}:CarsDisplayProps) {
                         {coche.price}€
                     </p>
                     <button className="container__card--button">
-                        Mas Info
+                        Más Info
                     </button>
                 </div>
             </div>

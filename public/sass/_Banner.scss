@@ -8,8 +8,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    
-
     &--text{
         height: 90%;
         width: 90%;
@@ -23,6 +21,14 @@
         font-weight: bold;
         text-shadow: 10px 5px 50px rgb(0, 0, 0);
         border-radius: 4rem;
+
+        @media(max-width:768px){
+            font-size: 40px;
+        }
+
+        @media(max-width:1200px){
+            font-size: 40px;
+        }
     }
 }
 

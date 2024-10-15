@@ -1,10 +1,11 @@
 
 .container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr); 
     gap: 1rem;
     color:black;
+
 
 
     &__item{
@@ -41,14 +42,13 @@
             position:relative;
             top:100px;
 
-            @media(max-width: 768px){
-                height: 120px;
-                position:relative;
-                top:50px;
-            }
-
             @media(max-width: 1024px){
-                height: 150px;
+                height: 100px;
+                position:relative;
+                top:70px;
+            }
+            @media(max-width: 1024px){
+                height: 120px;
                 position:relative;
                 top:70px;
             }
@@ -80,8 +80,8 @@
         }
     }
 
-    @media(max-width: 1200px){
-        grid-template-columns: 1fr 1fr ;
+    @media(max-width: 1280px){
+        grid-template-columns: 1fr 1fr;
     }
 
     @media(max-width: 768px){
@@ -96,7 +96,7 @@
         padding-left: 30px;
         padding-right: 30px;
         align-items: center;
-        gap: 4px;
+        gap: 3px;
         
 
         @media(max-width: 768px){

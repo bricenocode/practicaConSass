@@ -1,3 +1,83 @@
+
+.insuranceSection{
+    
+    &__container{
+        display: flex;
+        flex-wrap: wrap;   
+        gap: 15px;
+        text-align: center;
+        justify-content: center;
+        padding: 2rem;
+
+        &--title{
+            color:black;
+        }
+    }
+}
+
+
 .insurance{
-    color: black;
+    width: 300px;
+    border-radius: 3rem 3rem 0 0;
+    box-shadow: 2px 2px 5px rgb(214, 214, 214);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &__details{
+            padding: 10px;
+        &--adventages{
+            padding: 10px;
+            margin: 0;
+        }
+
+    }
+
+    &__summary{
+
+        &--img{
+            width: 15rem;
+            
+        }
+
+        &--title{
+            padding: 10px;
+            width: 40px;
+        }
+    }
+
+    &__box{
+        background-color: rgb(255, 255, 255);
+        padding: 10px;
+        text-align: justify;
+        color: black;
+        font-weight:300;
+        font-size: 20px;
+        line-height: 28px;
+        
+        @media (max-width: 768px){
+            font-size: 15px;
+            line-height: 24px;
+        }
+    }
+
+    &__button{
+        a{
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+            &:visited,&:active{
+                color: white;
+            }
+        }
+        font-size: 20px;
+        margin: 0;
+        padding: 15px;
+        border:none;
+        background-color: rgb(0, 23, 66);
+        width: 300px;
+        border-radius: 0 0 2rem 2rem
+    }
 }

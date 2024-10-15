@@ -1,0 +1,18 @@
+.botonUp{
+
+    color: white;
+    background-color: #091722;
+    width: 80px;
+    border: white;
+    border-radius: 3rem;
+    left: 95%;
+    top: 90%;
+    position: sticky;
+    padding: 1px;
+    
+    @media(max-width: 768px){
+        left: 90%;
+        top: 90%;
+        padding: 0px;
+    }
+}
