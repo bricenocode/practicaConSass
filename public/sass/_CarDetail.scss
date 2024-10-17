@@ -1,0 +1,153 @@
+.carDetail {
+    height: 70vh;
+    width: 120vh;
+    color: rgb(0, 0, 0);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 300px;
+
+    @media (max-width: 1200px) {
+        height: 40vh;
+        width: 80vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 220px;
+    }
+
+    @media (max-width: 768px) {
+        height: 90vh;
+        width: 40vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.7fr 1fr;
+    }
+
+    &__image {
+        padding: 40px;
+
+        img {
+            width: 700px;
+
+            @media (max-width: 1200px) {
+                width: 600px;
+            }
+
+            @media (max-width: 768px) {
+                width: 300px;
+            }
+        }
+    }
+
+    &__details {
+        margin: 30px;
+
+        &--title {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            background-color: rgba(52, 126, 190, 0.623);
+            border-radius: 3rem;
+            padding-left: 30px;
+            padding-right: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.247);
+
+            p:nth-of-type(1) {
+                // Para el brand
+                font-weight: bold;
+            }
+
+            p:nth-of-type(2) {
+                // Para el model
+                font-weight: bold;
+            }
+
+            p:nth-of-type(3) {
+                // Para el year
+                font-weight: lighter;
+            }
+
+            p:nth-of-type(4) {
+                // Para el color
+                font-weight: normal;
+            }
+
+            p:nth-of-type(5) {
+                // Para el price
+                font-weight: bold;
+                color: rgb(104, 14, 14);
+            }
+
+            @media (max-width: 768px) {
+                display: block;
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        &--content {
+            margin-top:20px;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            font-size: 20px;
+            gap: 4px;
+
+            @media (max-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+                font-size: 15px;
+            }
+
+            p{
+                border: 1px solid black;
+                border-radius: 2rem;
+                padding: 10px;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                gap: 7px;
+                background-color: rgba(26, 74, 119, 0.308);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.082);
+
+                span{
+                    color: rgb(4, 12, 44);
+                    font-weight: bold;
+                }
+            }
+        }
+
+        &--desc {
+            padding: 30px;
+            display: flex;
+            text-align: justify;
+            background-color: rgba(221, 221, 221, 0.582);
+            border-radius: 3rem;
+            box-shadow: 0 10px 20px rgba(37, 62, 77, 0.247);
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.modal {
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    border: 0;
+    box-shadow: 0 7px 400px rgb(0, 0, 0);
+
+    &--close{
+        position: absolute;
+        top: 6px;
+        right: 0;
+
+        button{
+            border: 0;
+            background-color: transparent;
+        }
+        
+        .icon{
+            height: 40px;
+            color: black;
+        }
+    }
+
+}

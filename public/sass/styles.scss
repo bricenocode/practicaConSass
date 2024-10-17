@@ -1,40 +1,66 @@
+$telefono: 480px;
+$tablet: 768px;
+$pc: 1200px;
+$pcGrande: 1400px;
 
-$telefono:480px;
-$tablet:768px;
-$pc:1200px;
-$pcGrande:1400px;
+@use "./Display";
+@use "./Header";
+@use "./CarDisplay";
+@use "./CarDetail";
+@use "./CarsInsurance";
+@use "./Banner";
+@use "./Form";
+@use "./Galery";
+@use "./Legals";
+@use "./BotonUp";
+@use "./Footer";
 
-@use './Header';
-@use './CarDisplay';
-@use './CarDetail';
-@use './CarsInsurance';
-@use './Banner';
-@use './Form';
-@use './Galery';
-@use './Legals';
-@use './BotonUp';
-@use './Footer';
-
-html{
+html {
     font-size: 62.5%;
-    
+    margin: 0;
+    padding: 0;
+
+    a {
+        text-decoration: none;
+        /* Quita el subrayado */
+        color: inherit;
+        /* Hace que el enlace herede el color del texto circundante */
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+        text-decoration: none;
+        /* Asegura que en estado hover, focus o active tampoco tenga subrayado */
+        color: inherit;
+        /* Mantiene el color original en esos estados */
+    }
+
+    ul{
+        list-style-type: none;     
+    }
 }
 
 body {
+    margin: 0;
+    padding: 0;
     width: 100%;
-    font-family: 'Oswald', serif;
+    font-family: "Oswald", serif;
     font-size: 2rem;
     text-align: center;
     color: white;
 
-    h1,h2, h3,h4{
-        color:black;
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: black;
         text-transform: uppercase;
     }
 
 }
 
-.main{
+.main {
     display: flex;
     flex-direction: column;
     align-items: center;

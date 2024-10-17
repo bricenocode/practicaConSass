@@ -30,11 +30,13 @@ export default function Galery(){
         },
         ];
     return(
-        <>
-            <h2>Galeria de Fotos</h2>
-            <div className="galery">
-                <ImageGallery items={images}/>
+        <section id='galery' className='galery'>
+            <div>
+                <h2>Galeria de Fotos</h2>
+                <div className="galery">
+                    <ImageGallery items={images}/>
+                </div>
             </div>
-        </>
+        </section>
     )
 }

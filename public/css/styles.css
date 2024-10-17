@@ -1,23 +1,12 @@
-@charset "UTF-8";
-body a {
-  color: black;
-  text-decoration: none; /* Sin subrayado */
-}
-body a:visited {
-  color: inherit; /* O puedes especificar otro color */
-  text-decoration: none; /* Sin subrayado después de ser visitado */
-}
-body a:active {
-  color: inherit; /* Mantiene el color del elemento padre */
-  text-decoration: none; /* Elimina el subrayado */
-  outline: none; /* Quita el borde que aparece en algunos navegadores */
-}
-body ul {
-  list-style-type: none;
+.displayContainer {
+  display: grid;
+  grid-template-rows: 240px 400px auto 200px;
+  gap: 20px;
+  margin: 0;
 }
 
 .nav {
-  height: 70%;
+  height: 200px;
   background-color: #091722;
   padding: 2rem;
   display: flex;
@@ -25,13 +14,27 @@ body ul {
   flex-direction: row;
   flex-flow: wrap;
   justify-content: center;
+  text-align: center;
+  align-items: center;
   border-radius: 4px;
-  margin: 10px;
+  margin: 0;
 }
 .nav__logo {
-  height: 8rem;
-  width: 8rem;
+  height: 20rem;
+  width: 20rem;
   border-radius: 100%;
+}
+@media (max-width: 1200px) {
+  .nav__logo {
+    height: 10rem;
+    width: 10rem;
+  }
+}
+@media (max-width: 768px) {
+  .nav__logo {
+    height: 10rem;
+    width: 10rem;
+  }
 }
 .nav__items {
   display: flex;
@@ -40,11 +43,12 @@ body ul {
   flex-flow: wrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 1rem;
   padding: 1rem;
-  margin: 1rem;
 }
 .nav__items--items {
+  font-size: 34px;
   background-color: #044f64;
   text-decoration: none;
   color: white;
@@ -52,6 +56,16 @@ body ul {
   padding-right: 1rem;
   border: 1px solid;
   border-radius: 2rem;
+}
+@media (max-width: 1200px) {
+  .nav__items--items {
+    font-size: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .nav__items--items {
+    font-size: 20px;
+  }
 }
 
 .container {
@@ -179,6 +193,143 @@ body ul {
   border-radius: 2rem;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.carDetail {
+  height: 70vh;
+  width: 120vh;
+  color: rgb(0, 0, 0);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 300px;
+}
+@media (max-width: 1200px) {
+  .carDetail {
+    height: 40vh;
+    width: 80vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 220px;
+  }
+}
+@media (max-width: 768px) {
+  .carDetail {
+    height: 90vh;
+    width: 40vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.7fr 1fr;
+  }
+}
+.carDetail__image {
+  padding: 40px;
+}
+.carDetail__image img {
+  width: 700px;
+}
+@media (max-width: 1200px) {
+  .carDetail__image img {
+    width: 600px;
+  }
+}
+@media (max-width: 768px) {
+  .carDetail__image img {
+    width: 300px;
+  }
+}
+.carDetail__details {
+  margin: 30px;
+}
+.carDetail__details--title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(52, 126, 190, 0.623);
+  border-radius: 3rem;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.247);
+}
+.carDetail__details--title p:nth-of-type(1) {
+  font-weight: bold;
+}
+.carDetail__details--title p:nth-of-type(2) {
+  font-weight: bold;
+}
+.carDetail__details--title p:nth-of-type(3) {
+  font-weight: lighter;
+}
+.carDetail__details--title p:nth-of-type(4) {
+  font-weight: normal;
+}
+.carDetail__details--title p:nth-of-type(5) {
+  font-weight: bold;
+  color: rgb(104, 14, 14);
+}
+@media (max-width: 768px) {
+  .carDetail__details--title {
+    display: block;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.carDetail__details--content {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  font-size: 20px;
+  gap: 4px;
+}
+@media (max-width: 768px) {
+  .carDetail__details--content {
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 15px;
+  }
+}
+.carDetail__details--content p {
+  border: 1px solid black;
+  border-radius: 2rem;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 7px;
+  background-color: rgba(26, 74, 119, 0.308);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.082);
+}
+.carDetail__details--content p span {
+  color: rgb(4, 12, 44);
+  font-weight: bold;
+}
+.carDetail__details--desc {
+  padding: 30px;
+  display: flex;
+  text-align: justify;
+  background-color: rgba(221, 221, 221, 0.582);
+  border-radius: 3rem;
+  box-shadow: 0 10px 20px rgba(37, 62, 77, 0.247);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.modal {
+  background-color: rgb(255, 255, 255);
+  border-radius: 1rem;
+  border: 0;
+  box-shadow: 0 7px 400px rgb(0, 0, 0);
+}
+.modal--close {
+  position: absolute;
+  top: 6px;
+  right: 0;
+}
+.modal--close button {
+  border: 0;
+  background-color: transparent;
+}
+.modal--close .icon {
+  height: 40px;
+  color: black;
 }
 
 .insuranceSection__container {
@@ -420,7 +571,7 @@ body ul {
 
 .botonUp {
   color: white;
-  background-color: #091722;
+  background-color: #103858;
   width: 80px;
   border: white;
   border-radius: 3rem;
@@ -428,9 +579,11 @@ body ul {
   top: 90%;
   position: sticky;
   padding: 1px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.233);
 }
 @media (max-width: 768px) {
   .botonUp {
+    color: white;
     left: 90%;
     top: 90%;
     padding: 0px;
@@ -503,16 +656,40 @@ body ul {
 
 html {
   font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+}
+html a {
+  text-decoration: none;
+  /* Quita el subrayado */
+  color: inherit;
+  /* Hace que el enlace herede el color del texto circundante */
+}
+html a:hover,
+html a:focus,
+html a:active {
+  text-decoration: none;
+  /* Asegura que en estado hover, focus o active tampoco tenga subrayado */
+  color: inherit;
+  /* Mantiene el color original en esos estados */
+}
+html ul {
+  list-style-type: none;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   width: 100%;
   font-family: "Oswald", serif;
   font-size: 2rem;
   text-align: center;
   color: white;
 }
-body h1, body h2, body h3, body h4 {
+body h1,
+body h2,
+body h3,
+body h4 {
   color: black;
   text-transform: uppercase;
 }
