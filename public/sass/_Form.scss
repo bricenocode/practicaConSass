@@ -1,9 +1,9 @@
+@import './mixins';
+
 .contacto{
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
+    @include centrar();
     flex-wrap: wrap;
+    gap: 2rem;
     
 
     &__info{
@@ -13,7 +13,7 @@
         justify-content: center;
         text-align: justify;
 
-        @media(max-width: 768px){
+        @include responsive(medium){
             font-size: 15px;
         }
 
@@ -23,28 +23,23 @@
     }
     &__map{
         width: 500px;
-        @media(max-width: 768px){
+        @include responsive(extra-small){
             width: 300px;
         }
     }
 }
 
     .form{
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    @include centrar();
     color: black;
     
 
     &__display{
-        margin: 10px;
-        display: flex;
+        @include centrar();
         flex-direction: column;
-        justify-content: center;
-        text-align: center;
         gap: 10px;
         width: 320px;
-
+        margin: 10px;
         
 
         &--label{

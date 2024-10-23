@@ -1,3 +1,5 @@
+@import './mixins';
+
 .footer {
   background-color: #282c34; // Color de fondo oscuro
   color: #fff; // Color de texto claro
@@ -5,17 +7,14 @@
   text-align: center; // Centrar el texto
 
   &__container {
-    display: flex; // Usar flexbox para centrar el contenido
+    @include centrar();
     flex-direction: column; // Colocar items en columna
-    align-items: center; // Centrar items horizontalmente
-    justify-content: center; // Centrar items verticalmente
     max-width: 1200px; // Ancho máximo del contenedor
     margin: 0 auto; // Centrar el contenedor en la página
     padding: 0 15px; // Espaciado interno lateral
 
     &__items {
-      display: flex; // Usar flexbox para los items
-      justify-content: center; // Centrar horizontalmente los items
+      @include centrar();
       list-style: none; // Quitar los puntos de la lista
       padding: 0; // Sin padding
       margin: 0 0 10px; // Margen inferior para separación
@@ -46,7 +45,7 @@
 }
 
 // Estilos responsivos
-@media (max-width: 768px) {
+@include responsive(small){
   .footer {
     padding: 15px 0; // Reducir padding en móviles
 
@@ -68,7 +67,7 @@
     width: 50px;
     height: 50px;
 
-    @media(max-width: 768px){
+    @include responsive(small){
         width: 25px;
     height: 25px;
     }

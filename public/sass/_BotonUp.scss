@@ -1,6 +1,7 @@
-
+@import './mixins.scss';
 
 .botonUp{
+    z-index: 1;
     color: white;
     background-color: #103858;
     width: 80px;
@@ -8,13 +9,27 @@
     border-radius: 3rem;
     left: 95%;
     top: 90%;
-    position: sticky;
+    position: fixed;
     padding: 1px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.233);
-    @media(max-width: 768px){
+
+    @include responsive(large){
         color: white;
         left: 90%;
-        top: 90%;
+        top: 80%;
         padding: 0px;
+        font-size: medium;
     }
+
+    @include responsive(small){
+        color: white;
+        left: 70%;
+        top: 80%;
+        padding: 0px;
+        font-size: medium;
+    }
+}
+
+.boton{
+    position:sticky
 }

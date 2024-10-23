@@ -15,11 +15,12 @@ $pcGrande: 1400px;
 @use "./BotonUp";
 @use "./Footer";
 
+
+
 html {
     font-size: 62.5%;
     margin: 0;
     padding: 0;
-
     a {
         text-decoration: none;
         /* Quita el subrayado */

@@ -1,16 +1,13 @@
-
+@import './mixins';
 
 .nav{
     height: 200px;
     background-color:#091722 ;
     padding: 2rem;
-    display: flex;
-    flex: auto;
+    @include centrar();
     flex-direction: row;
+    flex: auto;
     flex-flow: wrap;
-    justify-content: center; 
-    text-align: center;
-    align-items: center;
     border-radius: 4px;
     margin: 0;
     &__logo{
@@ -19,13 +16,13 @@
         border-radius: 100%;
 
 
-        @media(max-width: 1200px){
+        @include responsive(large){
             height: 10rem;
             width: 10rem;
         }
 
 
-        @media(max-width: 768px){
+        @include responsive(medium){
             height: 10rem;
             width: 10rem;
         }
@@ -33,13 +30,10 @@
     }
 
     &__items{
-        display: flex;
+        @include centrar();
         flex: 0 auto;
         flex-direction: column;
         flex-flow: wrap;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
         gap: 1rem;
         padding: 1rem;
 
@@ -53,11 +47,11 @@
             border: 1px solid ;
             border-radius: 2rem;
 
-            @media(max-width: 1200px){
+            @include responsive(large){
                 font-size: 25px;
             }
 
-            @media(max-width: 768px){
+            @include responsive(small){
                 font-size: 20px;
             }
 

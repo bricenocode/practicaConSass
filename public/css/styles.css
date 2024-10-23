@@ -10,12 +10,12 @@
   background-color: #091722;
   padding: 2rem;
   display: flex;
-  flex: auto;
-  flex-direction: row;
-  flex-flow: wrap;
   justify-content: center;
-  text-align: center;
   align-items: center;
+  text-align: center;
+  flex-direction: row;
+  flex: auto;
+  flex-flow: wrap;
   border-radius: 4px;
   margin: 0;
 }
@@ -30,7 +30,7 @@
     width: 10rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .nav__logo {
     height: 10rem;
     width: 10rem;
@@ -38,12 +38,12 @@
 }
 .nav__items {
   display: flex;
-  flex: 0 auto;
-  flex-direction: column;
-  flex-flow: wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
+  flex: 0 auto;
+  flex-direction: column;
+  flex-flow: wrap;
   gap: 1rem;
   padding: 1rem;
 }
@@ -108,14 +108,14 @@
   position: relative;
   top: 100px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .container__item--image {
     height: 100px;
     position: relative;
     top: 70px;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .container__item--image {
     height: 120px;
     position: relative;
@@ -240,9 +240,10 @@
 }
 .carDetail__details--title {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   text-align: center;
+  justify-content: space-between;
   background-color: rgba(52, 126, 190, 0.623);
   border-radius: 3rem;
   padding-left: 30px;
@@ -292,6 +293,7 @@
   margin: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
   gap: 7px;
   background-color: rgba(26, 74, 119, 0.308);
@@ -304,7 +306,9 @@
 .carDetail__details--desc {
   padding: 30px;
   display: flex;
-  text-align: justify;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   background-color: rgba(221, 221, 221, 0.582);
   border-radius: 3rem;
   box-shadow: 0 10px 20px rgba(37, 62, 77, 0.247);
@@ -334,10 +338,11 @@
 
 .insuranceSection__container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   flex-wrap: wrap;
   gap: 15px;
-  text-align: center;
-  justify-content: center;
   padding: 2rem;
 }
 .insuranceSection__container--title {
@@ -439,10 +444,11 @@
 
 .contacto {
   display: flex;
-  gap: 2rem;
   justify-content: center;
   align-items: center;
+  text-align: center;
   flex-wrap: wrap;
+  gap: 2rem;
 }
 .contacto__info {
   color: black;
@@ -451,7 +457,7 @@
   justify-content: center;
   text-align: justify;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .contacto__info {
     font-size: 15px;
   }
@@ -462,7 +468,7 @@
 .contacto__map {
   width: 500px;
 }
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   .contacto__map {
     width: 300px;
   }
@@ -471,17 +477,19 @@
 .form {
   display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
   color: black;
 }
 .form__display {
-  margin: 10px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
+  flex-direction: column;
   gap: 10px;
   width: 320px;
+  margin: 10px;
 }
 .form__display--label {
   background-color: rgb(211, 211, 211);
@@ -537,10 +545,10 @@
 
 .legals {
   display: flex;
-  flex-direction: column;
-  text-align: justify;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
   padding: 20px;
   margin: 0 auto;
   width: 80%;
@@ -570,6 +578,7 @@
 }
 
 .botonUp {
+  z-index: 1;
   color: white;
   background-color: #103858;
   width: 80px;
@@ -577,17 +586,31 @@
   border-radius: 3rem;
   left: 95%;
   top: 90%;
-  position: sticky;
+  position: fixed;
   padding: 1px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.233);
+}
+@media (max-width: 1200px) {
+  .botonUp {
+    color: white;
+    left: 90%;
+    top: 80%;
+    padding: 0px;
+    font-size: medium;
+  }
 }
 @media (max-width: 768px) {
   .botonUp {
     color: white;
-    left: 90%;
-    top: 90%;
+    left: 70%;
+    top: 80%;
     padding: 0px;
+    font-size: medium;
   }
+}
+
+.boton {
+  position: sticky;
 }
 
 .footer {
@@ -598,9 +621,10 @@
 }
 .footer__container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
@@ -608,6 +632,8 @@
 .footer__container__items {
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   list-style: none;
   padding: 0;
   margin: 0 0 10px;

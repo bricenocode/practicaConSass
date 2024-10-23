@@ -15,7 +15,7 @@ export default function Form() {
                         <p><span>CIF/NIF:</span> B12345678</p>
                     </div>
                     <div>s
-                        <img className="contacto__map" src="../../public/img/ubicacionContacto.png" alt="" />
+                        <img className="contacto__map" src="img/ubicacionContacto.png" alt="" />
                     </div>
                     <div>
                         <div className="form">

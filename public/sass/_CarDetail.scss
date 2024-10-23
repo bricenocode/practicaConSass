@@ -1,3 +1,5 @@
+@import './mixins';
+
 .carDetail {
     height: 70vh;
     width: 120vh;
@@ -6,14 +8,14 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 300px;
 
-    @media (max-width: 1200px) {
+    @include responsive(large){
         height: 40vh;
         width: 80vh;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 220px;
     }
 
-    @media (max-width: 768px) {
+    @include responsive(small){
         height: 90vh;
         width: 40vh;
         grid-template-columns: 1fr;
@@ -26,11 +28,11 @@
         img {
             width: 700px;
 
-            @media (max-width: 1200px) {
+            @include responsive(large){
                 width: 600px;
             }
 
-            @media (max-width: 768px) {
+            @include responsive(small){
                 width: 300px;
             }
         }
@@ -40,11 +42,8 @@
         margin: 30px;
 
         &--title {
-
-            display: flex;
+            @include centrar();
             justify-content: space-between;
-            align-items: center;
-            text-align: center;
             background-color: rgba(52, 126, 190, 0.623);
             border-radius: 3rem;
             padding-left: 30px;
@@ -77,7 +76,7 @@
                 color: rgb(104, 14, 14);
             }
 
-            @media (max-width: 768px) {
+            @include responsive(small){
                 display: block;
                 flex-direction: row;
                 justify-content: center;
@@ -91,7 +90,7 @@
             font-size: 20px;
             gap: 4px;
 
-            @media (max-width: 768px) {
+            @include responsive(small){
                 grid-template-columns: repeat(2, 1fr);
                 font-size: 15px;
             }
@@ -101,9 +100,7 @@
                 border-radius: 2rem;
                 padding: 10px;
                 margin: 0;
-                display: flex;
-                justify-content: center;
-                text-align: center;
+                @include centrar();
                 gap: 7px;
                 background-color: rgba(26, 74, 119, 0.308);
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.082);
@@ -117,8 +114,7 @@
 
         &--desc {
             padding: 30px;
-            display: flex;
-            text-align: justify;
+            @include centrar();
             background-color: rgba(221, 221, 221, 0.582);
             border-radius: 3rem;
             box-shadow: 0 10px 20px rgba(37, 62, 77, 0.247);

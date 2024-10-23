@@ -1,11 +1,13 @@
+@import './mixins';
+
 .galery{
     width: 800px;
 
-    @media(max-width: 1200px){
+    @include responsive(large){
         width: 600px;
     }
     
-    @media(max-width: 768px){
+    @include responsive(small){
         width: 400px;
     }
 

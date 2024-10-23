@@ -1,0 +1,37 @@
+// mixins.scss
+@mixin centrar() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+// Mapa de breakpoints
+$breakpoints: (
+  extra-small: 500px,
+  small: 768px,
+  medium: 900px,
+  large: 1200px,
+  xl: 1440px
+);
+
+// responsive
+@mixin responsive($measurement, $type: max) {
+  // Validar que el tipo sea 'min' o 'max'
+  @if $type != min and $type != max {
+    @error "El tipo de media query debe ser 'min' o 'max'. Se recibió #{$type}.";
+  }
+
+  // Extraer el valor del breakpoint del mapa
+  $breakpoint: map-get($breakpoints, $measurement);
+
+  // Validar que el breakpoint exista
+  @if $breakpoint == null {
+    @error "El valor del breakpoint '#{$measurement}' no existe. Los valores permitidos son #{map-keys($breakpoints)}.";
+  }
+
+  // Aplicar la media query usando el tipo y el valor correcto
+  @media (#{$type}-width: $breakpoint) {
+    @content;
+  }
+}
