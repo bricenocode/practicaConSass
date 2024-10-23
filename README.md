@@ -33,20 +33,6 @@ Aunque **Sass** facilita la escritura de estilos más organizados, también me e
 
 El uso de **TypeScript** en combinación con React al consumir **APIs externas** presentó dificultades adicionales.
 
-**Problemas concretos:**
-
-- **Tipado de datos dinámicos:** La API que utilicé devolvía una estructura de datos inconsistente, lo que requería ajustar los tipos.
-- **Manejo de promesas y estados asincrónicos:** Tipar correctamente las promesas y manejar los estados asincrónicos dentro de `useEffect` fue todo un desafío.
-
-### 4. Estado Global y Manejo de Contextos
-
-La **gestión del estado global** usando **Context API** y **TypeScript** resultó ser más complicado de lo que esperaba.
-
-**Problemas concretos:**
-
-- **Tipado de los contextos:** Definir los tipos y estados globales correctamente en TypeScript me llevó más tiempo de lo anticipado.
-- **Rendimiento y renders innecesarios:** El uso incorrecto del contexto resultaba en renders innecesarios y afectaba el rendimiento.
-
 ---
 
 ## Soluciones e Implementaciones
@@ -91,7 +77,6 @@ Este proyecto fue una gran oportunidad de aprendizaje, y me llevo varias leccion
 
 3. **Eficiencia con Sass:** **Sass** es extremadamente poderoso, pero su mal uso puede complicar el mantenimiento. Es crucial hacer un uso moderado del anidamiento y crear **mixins reutilizables** para estilos comunes.
 
-4. **Gestión Asincrónica con React:** El manejo de datos asíncronos con React y TypeScript puede ser complicado, pero con las herramientas adecuadas (como hooks personalizados), se puede construir una lógica robusta.
 
 ---
 
