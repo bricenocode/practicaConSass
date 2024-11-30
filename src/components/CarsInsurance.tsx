@@ -11,7 +11,7 @@ export default function CarsInsurance({seguro}: CarsInsuranceProps) {
             <div className="insurance">
                 <details className="insurance__details">
                     <summary className="insurance__summary">
-                    <img className="insurance__summary--img" src={`img/${seguro.image}.png`} alt={`Logo de ${seguro.name}`}/>
+                    <img className="insurance__summary--img" src={`../img/${seguro.image}.png`} alt={`Logo de ${seguro.name}`}/>
                     </summary>
                     <div className="insurance__box">
                         <h4 className="insurance__details--title">{seguro.description}</h4>
